@@ -38,7 +38,7 @@ export default function () {
         dropZone.classList.remove('hover');
         let [file] = event.dataTransfer.files;
 
-        if (file.size > 300 * 1024) {
+        if (file.size > 512 * 1024) {
             alert('Файл слишком большой!');
         }
         else {

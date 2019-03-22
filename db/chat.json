@@ -81,6 +81,14 @@
     {
       "login": "alex",
       "FIO": "alex"
+    },
+    {
+      "login": "s",
+      "FIO": "s"
+    },
+    {
+      "login": "Maz",
+      "FIO": "Maz"
     }
   ],
   "userImg": [
@@ -102,6 +110,14 @@
     },
     {
       "login": "alex",
+      "img": "./img/no-photo.png"
+    },
+    {
+      "login": "s",
+      "img": "./img/no-photo.png"
+    },
+    {
+      "login": "Maz",
       "img": "./img/no-photo.png"
     }
   ],

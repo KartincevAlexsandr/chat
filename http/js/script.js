@@ -1,6 +1,6 @@
 let buttonSend = document.getElementById('button-send');
 let newMassage = document.getElementById('input-add-comment');
-let countUser = document.getElementById('countUser');
+var countUser = document.getElementById('countUsers');
 import add_foto from './module/add_foto.js';
 import add_message from './module/chatAdd.js';
 import { ws, loginNickName } from './module/connect.js';
@@ -29,10 +29,10 @@ ws.onmessage = function (event) {
 
         case 'all Users':
             const users = data.data.clientsOnly;
-            console.log(users);
-            countUser.innerText = `Участники(${users.length + 1})`
+            let count = 1;
             for (const user in users) {
                 if (users.hasOwnProperty(user)) {
+                    count++;
                     const name = users[user].login;
                     const li = document.createElement('li');
 
@@ -40,6 +40,7 @@ ws.onmessage = function (event) {
                     list.appendChild(li);
                 }
             }
+            countUser.innerHTML = `Участники(${count})`;
             break;
 
         case 'all message':
@@ -56,6 +57,7 @@ ws.onmessage = function (event) {
 
             li.textContent = name;
             list.appendChild(li);
+            countUser.innerHTML = `Участники(${list.children.length})`;
             break;
 
         case 'new avatar':
@@ -81,7 +83,7 @@ ws.onmessage = function (event) {
                     list.removeChild(li[i]);
                 }
             }
-
+            countUser.innerHTML = `Участники(${list.children.length})`;
             break;
     }
 }

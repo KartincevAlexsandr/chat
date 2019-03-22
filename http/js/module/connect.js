@@ -15,6 +15,7 @@ ws.onopen = () => {
         li.textContent = loginFIO.value;
         document.getElementById('list').appendChild(li);
 
+
     })
 };
 export { ws, loginNickName };
