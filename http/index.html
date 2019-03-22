@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>chat</title>
+    <script defer src="./js/script.js" type="module"></script>
+    <link href="./css/css.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="form_login">
+        <div>
+            <h3>Авторизоваться</h3>
+        </div>
+        <div class="form-login">
+            <div><input type="text" id="FIO" /></div>
+            <div><input type="text" id="nickName" /></div>
+            <div><button id="login">Войти</button></div>
+        </div>
+
+    </div>
+
+    <div id="image">
+        <div>
+            <h3>Загрузка фото</h3>
+        </div>
+        <div class="img">
+
+            <div id="dropZone">
+                Для загрузки, перетащите файл сюда.
+            </div>
+
+            <div><button id="btn_cancel">отмена</button><button id="btn_load">Загрузить</button></div>
+        </div>
+
+    </div>
+
+
+
+    <div id="left">
+        <div id="userInfo" class="userInfo">
+            <img id="userInfo_photo" class="userInfo_photo" src="./img/no-photo.png"></img>
+            <div id="Name" class="userInfo_name">Добро пожаловать!</div>
+        </div>
+        <div id="userList">
+            <div id="countUser">Участники()</div>
+            <ul id="list">
+            </ul>
+        </div>
+
+
+    </div>
+    <div id="right">
+        <div id=chat>
+
+        </div>
+        <div id="addComents">
+            <input type="text" id="input-add-comment" /><button id="button-send">Отправить</button>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
